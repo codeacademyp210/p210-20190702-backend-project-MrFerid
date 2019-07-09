@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.lorvent.com/fitness/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jul 2019 19:50:27 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <title>Welcome to Fit2Go Admin Dashboard</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    @Styles.Render("~/Content/css")
+    @RenderSection("Styles",false)
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <!-- header logo: style can be found in header-->
+    <header class="header">
+        <nav class="navbar navbar-static-top">
+            <a href="index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                <img src="~/Content/img/logo.png" alt="image not found">
+            </a>
+            <!-- Header Navbar: style can be found in header-->
+            <!-- Sidebar toggle button-->
+            <!-- Sidebar toggle button-->
+            <div>
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <i class="fa fa-fw fa-navicon"></i>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <!--tasks-->
+                    <!-- User Account: style can be found in dropdown-->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle padding-user" data-toggle="dropdown">
+                            <img src="~/Content/img/authors/avatar1.jpg" width="35" class="img-circle img-responsive pull-left" height="35" alt="User Image">
+                            <div class="riot">
+                                <div>
+                                    Natali
+                                    <span>
+                                        <i class="caret"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="~/Content/img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                                <p>Nataliapery</p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="pad-3">
+                                <a href="#">
+                                    <i class="fa fa-fw fa-user"></i> My Profile
+                                </a>
+                            </li>
+                            <li role="presentation"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-fw fa-gear"></i> Account Settings
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-right">
+                                    <a href="@Url.Action("SignOut","Home")">
+                                        <i class="fa fa-fw fa-sign-out"></i> Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar-->
+            <section class="sidebar">
+                <div id="menu" role="navigation">
+                    <div class="nav_profile">
+                        <div class="media profile-left">
+                            <a class="pull-left profile-thumb" href="#">
+                                <img src="~/Content/img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                            </a>
+                            <div class="content-profile">
+                                <h4 class="media-heading">Nataliapery</h4>
+                                <span class="text-default">Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navigation">
+                        <li class="active" id="active">
+                            <a href="@Url.Action("Index","Home")">
+                                <i class="text-primary menu-icon fa fa-fw fa-dashboard"></i>
+                                <span class="mm-text ">Dashboard</span>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","Info")">
+                                <i class="text-success menu-icon fa fa-fw fa-info-circle"></i>
+                                <span class="mm-text">Club Info</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","Package")">
+                                <i class="text-primary menu-icon fa fa-th fa-info-circle"></i>
+                                <span class="mm-text">Packages</span>
+                            </a>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-info menu-icon fa fa-fw fa-newspaper-o"></i>
+                                <span class="mm-text">News</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="@Url.Action("Index","News")">
+                                        <i class="text-primary menu-icon fa fa-inbox"></i> News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Modify","News")">
+                                        <i class="menu-icon text-success fa fa-pencil"></i> Add News
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-danger menu-icon fa fa-fw fa-calendar"></i>
+                                <span class="mm-text">Events</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="@Url.Action("Index","Event")">
+                                        <i class="text-primary menu-icon fa fa-fw fa-list"></i> Events List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Details","Event")">
+                                        <i class="text-info menu-icon fa fa-fw fa-fast-forward"></i> Event Item
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-warning menu-icon fa fa-fw fa-graduation-cap"></i>
+                                <span class="mm-text">Course Schedule</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="@Url.Action("Index","Shedule")">
+                                        <i class="text-primary fa fa-fw fa-th"></i> Course Schedule
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","Course")">
+                                        <i class="text-success fa fa-fw fa-indent"></i> Courses
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","Room")">
+                                        <i class="text-info fa fa-fw fa-star"></i> Rooms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","Trainer")">
+                                        <i class="text-danger fa fa-fw fa-paw"></i> Trainers
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#">
+                                <i class="text-default menu-icon fa fa-fw fa-users"></i>
+                                <span class="mm-text">Users</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="@Url.Action("Index","User")">
+                                        <i class="text-primary fa fa-fw fa-users"></i> Users List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Details","User")">
+                                        <i class="text-success fa fa-fw fa-user"></i> User Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Modify","User")">
+                                        <i class="text-info fa fa-fw fa-user"></i> Add Users
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Payment","User")">
+                                        <i class="text-danger fa fa-fw fa-money"></i> Payments
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","Cupon")">
+                                <i class="text-primary  menu-icon fa fa-scissors"></i>
+                                <span class="mm-text">Coupons</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- / .navigation -->
+                </div>
+                <!-- menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("Scripts",required: false)
+</body>
+</html>

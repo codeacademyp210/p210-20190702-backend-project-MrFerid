@@ -1,0 +1,60 @@
+﻿@model BackEndProject.Models.SystemUsers
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Fit2Go Admin Template</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- global level css -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- end of global css-->
+    <!-- page level styles-->
+    <link href="~/Content/vendors/iCheck/skins/all.css" rel="stylesheet" type="text/css">
+    <link type="text/css" href="~/Content/vendors/bootstrapvalidator/dist/css/bootstrapValidator.css" rel="stylesheet" />
+    <link href="~/Content/css/custom_css/login.css" rel="stylesheet" type="text/css">
+    <!-- end of page level styles-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="full-content-center">
+            <div class="box bounceInLeft animated">
+                <img src="~/Content/img/logo.png" class="logo" alt="image not found">
+                <h3 class="text-center">User Log In</h3>
+                @using (Html.BeginForm("SignIn", "Home",FormMethod.Post))
+                {
+                    <div class="form-group">
+                        <label class="sr-only"></label>
+                        <input type="text" class="form-control" name="sys.Email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only"></label>
+                        <input type="password" class="form-control" name="sys.Password" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn btn-block btn-warning" value="Log In">
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <!-- global js -->
+    <script src="~/Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <!-- end of global js -->
+    <!-- begining of page level js -->
+    <script src="~Content/vendors/iCheck/icheck.min.js" type="text/javascript"></script>
+    <script src="~Content/vendors/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+    <script src="~/Scripts/custom_js/login1.js" type="text/javascript"></script>
+    <!-- end of page level js -->
+</body>
+
+
+<!-- Mirrored from demo.lorvent.com/fitness/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jul 2019 19:52:10 GMT -->
+</html>

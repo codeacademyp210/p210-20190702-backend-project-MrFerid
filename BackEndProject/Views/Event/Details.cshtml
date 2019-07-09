@@ -1,0 +1,58 @@
+﻿@model BackEndProject.Models.Event
+
+<aside class="right-side right-padding">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h2>Event Item</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-fw fa-home"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+            <li>
+                <a href="event_item.html">Event Item</a>
+            </li>
+        </ol>
+    </section>
+    <!--section ends-->
+    <div class="container-fluid">
+        <!--main content-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            @Model.Title
+                        </h4>
+                        <span class="pull-right">
+                            <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
+                            <i class="glyphicon glyphicon-remove removepanel"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img src="~/Content/img/@Model.Image" class="img-responsive event_img" alt="image not found">
+                            </div>
+                            <div class="col-sm-11">
+                               
+                                @Html.Raw(Model.Description)
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.content -->
+</aside>
+
+@section Styles{
+    <link type="text/css" href="~/Content/css/custom_css/panel.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/css/custom_css/events.css" rel="stylesheet">
+    }
